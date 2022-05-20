@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root {
+    --primario : #1F2572;
+    --secundario: #CDEF77;
+    --terciario: #B122CB;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.logo {
+    width: 100%;   
+    height: 10%;
+}
+.botton-line{
+    border-bottom: solid .1px rgb(219, 219, 219);
+}
+@media (max-width: 980px ) {
+    .vertical{
+        display: inline !important;
+    }
+    .uso-completo {
+        width: 100% !important;
+    }
+
+}
+
+.bg-primario {
+    color: var(--secundario);
+    background: linear-gradient(to bottom right, var(--primario) 55%, var(--terciario));
+    border-radius: 39px 39px 39px 39px;
+    -moz-border-radius: 39px 39px 39px 39px;
+    -webkit-border-radius: 39px 39px 39px 39px;
+    padding: 50px;
+    transition: width 1s, height 1s, transform 1s;
+    margin: 10px;
+    min-width: 265px;
+}
+
+.bg-primario:hover {
+    transform : scale(1.1);
+} 
+
+.zoom {
+    transition: width 1s, height 1s, transform 1s;
+}
+.zoom:hover {
+    transform : scale(1.1);
+} 
+
+.bg-secundario {
+    background-color: var(--primario);
+}
+
+.rounded-personalizado {
+    border-radius: 30px;
+}
+
+.margin {
+    margin-top: 100px
+}
+
+a {
+    text-decoration: none
+}
+
+.fundacion1 {
+background-image: url(../images/fundaciones/5.png);
+height: 15rem;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.fundacion2 {
+background-image: url(../images/fundaciones/6.png);
+height: 15rem;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.fundacion3 {
+background-image: url(../images/fundaciones/7.png);
+height: 15rem;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+}
