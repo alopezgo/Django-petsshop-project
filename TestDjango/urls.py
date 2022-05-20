@@ -22,13 +22,13 @@ urlpatterns = [
 ]
 
 urlpatterns = [
-    path('', home, name="home"),
-    path('', index, name="index"),
-    path('', nosotros, name="nosotros"),
-    path('', contacto, name="contacto"),
-    path('', tienda, name="tienda"),
-    path('', donaciones, name="donaciones"),
-    path('', Gatos, name="Gatos"),
-    path('', Mas, name="Mas"),
-    path('', Perros, name="Perros"),
+    path('', home, name="home.html"),
+    path('', index, name="index.html"),
+    path('', nosotros, name="nosotros.html"),
+    path('', contacto, name="contacto.html"),
+    path('', tienda, name="tienda.html"),
+    path('', donaciones, name="donaciones.html"),
+    path('', Gatos, name="Gatos.html"),
+    path('', Mas, name="Mas...html"),
+    path('', Perros, name="Perros.html"),
 ]

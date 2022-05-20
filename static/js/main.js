@@ -9,67 +9,67 @@ $('#logo').on('click', function() {
 });
 $('#div-btn0').on('click', function() {
   $('.navbar-nav li').removeClass('active');
-  $("#central").load('../home.html');
+  $("#central").load('../core/templates/core/home.html');
   return false;
 }); 
 
 $('#div-btn1').on('click', function() {
   $('.navbar-nav li').removeClass('active');
-  $("#central").load('../tienda.html');
+  $("#central").load('../core/templates/core/tienda.html');
   return false;
   });
 
 $('#div-btn2').on('click', function() {
   $('.navbar-nav li').removeClass('active');
-  $("#central").load('../nosotros.html');
+  $("#central").load('../core/templates/core/nosotros.html');
   return false;
   });
 
 $('#div-btn3').on('click', function() {
   $('.navbar-nav li').removeClass('active');
-  $("#central").load('../contacto.html');
+  $("#central").load('../core/templates/core/contacto.html');
   return false;
   });
 
 $('#div-btn4').on('click', function() {
   $('.navbar-nav li').removeClass('active');
-  $("#central").load('../donaciones.html');
+  $("#central").load('../core/templates/core/donaciones.html');
   return false; 
   });
 
   //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
 $('#fotoTienda').on('click', function() {
-  $("#central").load('../tienda.html');
+  $("#central").load('tienda.html');
   return false;
 });
 
 $('#fotoNosotros').on('click', function() {
-  $("#central").load('../nosotros.html');
+  $("#central").load('../core/templates/core/nosotros.html');
   return false;
 });
 
 $('#fotoContacto').on('click', function() {
-  $("#central").load('../contacto.html');
+  $("#central").load('../core/templates/core/contacto.html');
   return false;
 });
 
 $('#fotoDona').on('click', function() {
-  $("#central").load('../donaciones.html');
+  $("#central").load('../core/templates/core/donaciones.html');
   return false;
 });
 
 $('#gatos').on('click', function() {
-  $("#central").load('../Gatos.html');
+  $("#central").load('../core/templates/core/Gatos.html');
   return false;
 });
 
 $('#perros').on('click', function() {
-  $("#central").load('../Perros.html');
+  $("#central").load('../core/templates/core/Perros.html');
   return false;
 });
 
 $('#mas').on('click', function() {
-  $("#central").load('../Mas...html');
+  $("#central").load('../core/templates/core/Mas...html');
   return false;
 });
     
