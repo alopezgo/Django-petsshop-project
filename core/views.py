@@ -2,13 +2,7 @@ from django.shortcuts import render
 from .models import Mascota
 # Create your views here.
 def home(request):
-    mascotas = Mascota.objects.all
-    
-    datos = {
-        'mascotas': mascotas
-    }
-    
-    return render(request, 'core/home.html', datos)
+    return render(request, 'core/home.html')
 
 
 def index(request):

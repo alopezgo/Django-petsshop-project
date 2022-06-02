@@ -1,17 +1,22 @@
 {% load static %}
 <body>
   <div class="container">
-      <div class="row">
-          <h1 class="text-center">Listado de Mascotas</h1>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 text-center bg-primario">
+          <h2 class="text-center m-4">MASCOTAS EN ADOPCIÓN</h2>
+
+      <div class="row d-flex justify-content-evenly mb-4">
               {% for m in mascotas %}
-                      <h1>{{ m.nombreMascota }}</h1>
-                      <p>{{ m.edadAnioMascota }} Años y {{ m.edadMesesMascota }} Meses</p>
-                      <p>{{ m.sexoMascota }}</p>
-                      <p>{{ m.estEstirizadoMascota }}</p>
-                      <p>{{ m.razaMascota }}</p>
-                      <p><img src="{{ m.fotoMascota }}"  class="w-100 rounded-personalizado"  ></p>
+              <div class="row col-2 text-center bg-primario">
+                <h1>{{ m.nombreMascota }}</h1>
+                <p>{{ m.edadAnioMascota }} Años y {{ m.edadMesesMascota }} Meses</p>
+                <p>{{ m.sexoMascota }}</p>
+                {% if m.estEstirizadoMascota == True %}
+                  <p>Esterilizado</p>
+                {% else %}
+                  <p>No esterilizado</p>
+                {% endif %}  
+                <p> Raza: {{ m.razaMascota }}</p>
+                <p><img src="{{ m.fotoMascota }}"  class="w-100 rounded-personalizado"  ></p>
+              </div>
               {% endfor %}
       </div>
   </div>
