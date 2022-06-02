@@ -1,0 +1,27 @@
+{% load static %}
+<body>
+  <div class="container">
+      <div class="row">
+          <h1 class="text-center">Listado de Mascotas</h1>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 text-center bg-primario">
+              {% for m in mascotas %}
+                      <h1>{{ m.nombreMascota }}</h1>
+                      <p>{{ m.edadAnioMascota }} Años y {{ m.edadMesesMascota }} Meses</p>
+                      <p>{{ m.sexoMascota }}</p>
+                      <p>{{ m.estEstirizadoMascota }}</p>
+                      <p>{{ m.razaMascota }}</p>
+                      <p><img src="{{ m.fotoMascota }}"  class="w-100 rounded-personalizado"  ></p>
+              {% endfor %}
+      </div>
+  </div>
+</body>
+<footer class="text-center bg-secundario text-light">
+  <div class="container pt-3">
+    <div class="row">
+      <div class="col-12">
+        <p>Copyright &copy; WOOF & MIAU. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>

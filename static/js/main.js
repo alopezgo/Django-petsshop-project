@@ -37,6 +37,12 @@ $('#div-btn4').on('click', function() {
   $("#central").load('donaciones');
   return false; 
   });
+$('#div-btn5').on('click', function() {
+  $('.navbar-nav li').removeClass('active');
+  $("#central").load('adopciones');
+  return false; 
+  });
+
 
   //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
 $('#fotoTienda').on('click', function() {

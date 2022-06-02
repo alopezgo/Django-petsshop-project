@@ -1,8 +1,14 @@
 from django.shortcuts import render
-
+from .models import Mascota
 # Create your views here.
 def home(request):
-    return render(request, 'core/home.html')
+    mascotas = Mascota.objects.all
+    
+    datos = {
+        'mascotas': mascotas
+    }
+    
+    return render(request, 'core/home.html', datos)
 
 
 def index(request):
@@ -36,6 +42,15 @@ def Mas(request):
 def Perros(request):
     return render(request, 'core/Perros.html')
 
+
+def Adopciones(request):
+    mascotas = Mascota.objects.all
+    
+    datos = {
+        'mascotas': mascotas
+    }
+    
+    return render(request, 'core/adopciones.html', datos)
 
 
 

@@ -11,4 +11,6 @@ urlpatterns = [
     path('Gatos/', Gatos, name="Gatos"),
     path('Mas../', Mas, name="Mas"),
     path('Perros/', Perros, name="Perros"),
+    path('adopciones/', Adopciones, name="adopciones"),
+
 ]
