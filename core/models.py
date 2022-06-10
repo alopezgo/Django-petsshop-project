@@ -51,3 +51,12 @@ class Mascota(models.Model):
     
     def __str__(self):
         return self.nombreMascota
+    
+class Fundacion (models.Model):
+    idFundacion = models.AutoField(primary_key=True, verbose_name='Id de Fundación')
+    nombreFundacion = models.CharField(max_length=150, verbose_name= 'Nombre de la Fundación' )
+    descFundacion = models.CharField(max_length=250, verbose_name= "Descripción de la Fundación")
+    fotoFundacion = models.ImageField(upload_to='static/images/upload/', default='static/images/fundaciones/5.png')
+    
+    def __str__(self):
+        return self.nombreFundacion
