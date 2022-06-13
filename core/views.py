@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from .models import Mascota
+from .models import Fundacion, Mascota
 # Create your views here.
+
+
 def home(request):
     return render(request, 'core/home.html')
 
@@ -22,6 +24,7 @@ def tienda(request):
 
 
 def donaciones(request):
+
     return render(request, 'core/donaciones.html')
 
 
@@ -39,13 +42,19 @@ def Perros(request):
 
 def Adopciones(request):
     mascotas = Mascota.objects.all
-    
+
     datos = {
         'mascotas': mascotas
     }
-    
+
     return render(request, 'core/adopciones.html', datos)
 
 
+def BeBrave(request):
+    fundacion = Fundacion.objects.all
 
+    datos = {
+        'fundaciones': fundacion
+    }
 
+    return render(request, 'core/adopciones.html', datos)
