@@ -1,7 +1,7 @@
 from urllib.request import Request
 from django.shortcuts import render, redirect
 from .models import Fundacion, Mascota, Producto
-from .forms import ProductosForm
+from .forms import FormularioCliente, ProductosForm
 
 # Create your views here.
 
@@ -95,10 +95,16 @@ def form_mod_productos(request, id):
     return render(request, 'core/form_mod_productos.html', datos)
 
 
-def form_del_productos(id):
+def form_del_productos(request, id):
     producto = Producto.objects.get(idproducto=id)
     producto.delete()
-    return redirect(to="listar_productos")
+    if request.method == 'DELETE':
+        formulario = ProductosForm(data=request.DELETE, instance=producto)
+
+        if formulario.is_valid:
+            formulario.save()
+
+    return redirect(to="listado_productos")
 
 
 def listado_productos(request):
@@ -119,3 +125,12 @@ def Adopciones(request):
     }
 
     return render(request, 'core/adopciones.html', datos)
+
+
+def Form_cliente(request):
+    cliente = FormularioCliente(request.POST)
+
+    if cliente.is_valid():
+        cliente.save()
+        cliente = FormularioCliente()
+    return render(request, "contacto.html", {"form": cliente, "mensaje": "ok"})

@@ -4,7 +4,9 @@
   <h1>Contactanos</h1>
 </div>
 <div class="container w-25 uso-completo">
-  <form class="row g-3 form needs-validation" id="formulario" novalidate>
+  <form class="row g-3 form needs-validation" id="formulario"  method="POST" novalidate>
+    {% csrf_token %}
+
     <div class="form-group">
       <label for="nombre" class="form-label">Nombres</label>
       <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -34,6 +36,7 @@
       <select class="form-control" id="comunas"  required></select>
     </div>
     <div>
+        {{ form }}
       <button type="submit" class="btn btn-primary " id="envio">Enviar</button>
     </div>
   </form>  
