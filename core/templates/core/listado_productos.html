@@ -39,9 +39,9 @@
                     <td>{{p.marca}}</td>
                     <td>{{p.categoria}}</td>
                     <td>{{p.descripcion}}</td>
-                    <td><img src="{{p.imagen}}"></td>
-                    <td><a href="{% url 'form_mod_productos' p.idproducto %}">Modificar</a></td>
-                    <td><a href="{% url 'form_del_productos' p.idproducto %}">Eliminar</a></td>
+                    <td><img src= "../{{p.imagen}}" class="m-auto w-50"></td>
+                    <td><a href= "{% url 'form_mod_productos' p.idproducto %}">Modificar</a></td>
+                    <td><a href= "{% url 'form_del_productos' p.idproducto %}">Eliminar</a></td>
                 </tr>
                 </tbody>
                 {% endfor %}
