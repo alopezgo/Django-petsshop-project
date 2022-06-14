@@ -17,4 +17,5 @@ urlpatterns = [
     path('del-productos/<int:id>', form_del_productos, name="form_del_productos"),
     path('listado-productos/', listado_productos, name="listado_productos"),
 
+
 ]

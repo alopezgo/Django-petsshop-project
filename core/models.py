@@ -87,3 +87,27 @@ class Fundacion (models.Model):
 
     def __str__(self):
         return self.nombreFundacion
+
+# Cliente para guardar en la BD
+
+
+class Cliente(models.Model):
+    idCliente = models.AutoField(
+        primary_key=True, verbose_name='ID de Cliente')
+    nombreCliente = models.CharField(
+        max_length=40, verbose_name='Nombre de Cliente')
+    ApellidoCliente = models.CharField(
+        max_length=40, verbose_name='Apellidos de Cliente')
+    telefonoCliente = models.CharField(
+        max_length=40, verbose_name='Telefono de Cliente')
+    emailCliente = models.CharField(
+        max_length=100, verbose_name='Email de Cliente')
+    direccionCliente = models.CharField(
+        max_length=250, verbose_name='Direccion de Cliente')
+    RegionCliente = models.CharField(
+        max_length=250, verbose_name='Region de Cliente')
+    ComunaCliente = models.CharField(
+        max_length=250, verbose_name='Comuna de Cliente')
+
+    def __str__(self):
+        return self.nombreCliente
