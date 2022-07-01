@@ -3,87 +3,87 @@ $(document).ready(function () {
 
 
   //cargar HTML siempre estando en el index
-  $('#logo').on('click', function () {
-    $("#central").load('home');
-    return false;
-  });
-  $('#div-btn0').on('click', function () {
-    $('.navbar-nav li').removeClass('active');
-    $("#central").load('home');
-    return false;
-  });
+  // $('#logo').on('click', function () {
+  //   $("#central").load('home');
+  //   return false;
+  // });
+  // $('#div-btn0').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('home');
+  //   return false;
+  // });
 
-  $('#div-btn1').on('click', function () {
-    $('.navbar-nav li').removeClass('active');
-    $("#central").load('tienda');
-    return false;
-  });
+  // $('#div-btn1').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('tienda');
+  //   return false;
+  // });
 
-  $('#div-btn2').on('click', function () {
-    $('.navbar-nav li').removeClass('active');
-    $("#central").load('nosotros');
+  // $('#div-btn2').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('nosotros');
 
-    return false;
-  });
+  //   return false;
+  // });
 
-  $('#div-btn3').on('click', function () {
-    $('.navbar-nav li').removeClass('active');
-    $("#central").load('contacto');
-    return false;
-  });
+  // $('#div-btn3').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('contacto');
+  //   return false;
+  // });
 
-  $('#div-btn4').on('click', function () {
-    $('.navbar-nav li').removeClass('active');
-    $("#central").load('donaciones');
-    return false;
-  });
-  $('#div-btn5').on('click', function () {
-    $('.navbar-nav li').removeClass('active');
-    $("#central").load('adopciones');
-    return false;
-  });
+  // $('#div-btn4').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('donaciones');
+  //   return false;
+  // });
+  // $('#div-btn5').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('adopciones');
+  //   return false;
+  // });
 
 
   //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
-  $('#fotoTienda').on('click', function () {
-    $("#central").load('tienda');
-    return false;
-  });
+  // $('#fotoTienda').on('click', function () {
+  //   $("#central").load('tienda');
+  //   return false;
+  // });
 
-  $('#fotoNosotros').on('click', function () {
-    $("#central").load('nosotros');
-    return false;
-  });
+  // $('#fotoNosotros').on('click', function () {
+  //   $("#central").load('nosotros');
+  //   return false;
+  // });
 
-  $('#fotoContacto').on('click', function () {
-    $("#central").load('contacto');
-    return false;
-  });
+  // $('#fotoContacto').on('click', function () {
+  //   $("#central").load('contacto');
+  //   return false;
+  // });
 
-  $('#fotoDona').on('click', function () {
-    $("#central").load('donaciones');
-    return false;
-  });
+  // $('#fotoDona').on('click', function () {
+  //   $("#central").load('donaciones');
+  //   return false;
+  // });
 
-  $('#gatos').on('click', function () {
-    $("#central").load('Gatos');
-    return false;
-  });
+  // $('#gatos').on('click', function () {
+  //   $("#central").load('Gatos');
+  //   return false;
+  // });
 
-  $('#perros').on('click', function () {
-    $("#central").load('Perros');
-    return false;
-  });
+  // $('#perros').on('click', function () {
+  //   $("#central").load('Perros');
+  //   return false;
+  // });
 
-  $('#mas').on('click', function () {
-    $("#central").load('Mas..');
-    return false;
-  });
+  // $('#mas').on('click', function () {
+  //   $("#central").load('Mas..');
+  //   return false;
+  // });
 
-  $('#btn-donacion').on('click', function () {
-    $("#central").load('adopciones');
-    return false;
-  });
+  // $('#btn-donacion').on('click', function () {
+  //   $("#central").load('adopciones');
+  //   return false;
+  // });
 
 
   //Conexion para obtener los datos de comuna y regiones

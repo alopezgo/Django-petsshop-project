@@ -1,0 +1,78 @@
+<!-- navbar -->
+{% load static %}
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light sticky-top botton-line col-md-12"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" id="logo" href="#">
+      <img
+        src="{% static 'images/logo_cortado.png' %}"
+        alt=""
+        width="100"
+        height="55"
+        class="d-inline-block align-text-top"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            id="div-btn0"
+            href="{% url 'listado_productos' %}"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            id="div-btn1"
+            href="{% url 'tienda' %}"
+            >Tienda</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            id="div-btn2"
+            href="{% url 'nosotros' %}"
+            >Nosotros</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            id="div-btn3"
+            href="{% url 'contacto' %}"
+            >Contacto</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            id="div-btn4"
+            href="{% url 'donaciones' %}"
+            >Fundaciones</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar -->

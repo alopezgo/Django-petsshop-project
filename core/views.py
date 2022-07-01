@@ -85,7 +85,7 @@ def form_mod_productos(request, id):
         'form': ProductosForm(instance=producto)
     }
 
-    if request.method == 'POST':
+    if request.method == 'PUT':
         formulario = ProductosForm(data=request.POST, instance=producto)
 
         if formulario.is_valid:
