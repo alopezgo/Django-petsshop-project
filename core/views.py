@@ -2,7 +2,7 @@ from urllib.request import Request
 from django.shortcuts import render, redirect
 from .models import Fundacion, Mascota, Producto
 from .forms import FormularioCliente, ProductosForm
-
+import requests
 # Create your views here.
 
 
@@ -43,16 +43,6 @@ def Perros(request):
     return render(request, 'core/Perros.html')
 
 
-def Adopciones(request):
-    mascotas = Mascota.objects.all
-
-    datos = {
-        'mascotas': mascotas
-    }
-
-    return render(request, 'core/adopciones.html', datos)
-
-
 def BeBrave(request):
     fundacion = Fundacion.objects.all
 
@@ -80,17 +70,19 @@ def form_productos(request):
 
 def form_mod_productos(request, id):
     producto = Producto.objects.get(idproducto=id)
-
+    print(producto)
     datos = {
         'form': ProductosForm(instance=producto)
     }
-
-    if request.method == 'PUT':
+    print("entro a la funcion")
+    print(datos)
+    if request.method == 'POST':
         formulario = ProductosForm(data=request.POST, instance=producto)
-
+        print(formulario)
         if formulario.is_valid:
             formulario.save()
             datos['mensaje'] = 'Modificado Correctamente'
+            print("me modifico")
 
     return render(request, 'core/form_mod_productos.html', datos)
 
@@ -108,20 +100,20 @@ def form_del_productos(request, id):
 
 
 def listado_productos(request):
-    productos = Producto.objects.all
+    r = requests.get('http://127.0.0.1:8000/api/lista-productos')
 
     datos = {
-        'productos': productos
+        'productos': r.json()
     }
 
     return render(request, 'core/listado_productos.html', datos)
 
 
 def Adopciones(request):
-    mascotas = Mascota.objects.all
+    r = requests.get('http://127.0.0.1:8000/api/lista-mascotas')
 
     datos = {
-        'mascotas': mascotas
+        'mascotas': r.json()
     }
 
     return render(request, 'core/adopciones.html', datos)

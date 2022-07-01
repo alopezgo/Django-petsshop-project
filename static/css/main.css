@@ -40,6 +40,7 @@ body {
     transition: width 1s, height 1s, transform 1s;
     margin: 10px;
     min-width: 265px;
+    margin-top: 2rem ;
 }
 
 .bg-primario:hover {

@@ -18,6 +18,8 @@
 </head>
 
 <body>
+    <div>{% include 'core\components\common\navbar.html' %}</div>
+
     <div class="text-center mt-3">
         <h1>Modificar información de Productos</h1>
     </div>
@@ -28,10 +30,13 @@
                 {{form.as_table}}
             </div>
             <br>
-            <div>
+            <div class="mb-3">
                 <input type="submit" class="btn btn-danger" id="enviar" value="Modificar" />
                 <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar" />
             </div>
+            <a href="{% url 'listado_productos' %}">
+                <h5>Volver</h5>
+            </a>
         </form>
     </div>
     <div class="alert alert success" role="alert">{{mensaje}}</div>
