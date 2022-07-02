@@ -16,7 +16,8 @@ class Categoria(models.Model):
 class Producto(models.Model):
     idproducto = models.AutoField(primary_key=True, verbose_name='ID Producto')
     marca = models.CharField(max_length=20, verbose_name='Marca Producto')
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(
+        Categoria, default=1,  on_delete=models.CASCADE)
     descripcion = models.CharField(
         max_length=500, verbose_name='Descripcion Producto')
     imagen = models.ImageField(
