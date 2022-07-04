@@ -21,7 +21,7 @@ class Producto(models.Model):
     descripcion = models.CharField(
         max_length=500, verbose_name='Descripcion Producto')
     imagen = models.ImageField(
-        upload_to='static/images/upload/')
+        upload_to='static/images/upload/', default='static/images/fundaciones/5.png')
 
     def __str__(self):
         return self.descripcion

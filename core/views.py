@@ -54,15 +54,14 @@ def BeBrave(request):
 
 
 def form_productos(request):
-
-    formulario = ProductosForm(request.POST, request.FILES)
     datos = {
-        'form': formulario
+        'form':  ProductosForm()
     }
-    if formulario.is_valid:
-        formulario.save()
-        datos['mensaje'] = 'Producto agregado correctamente'
-
+    if request.method == 'POST':
+        formulario = ProductosForm(request.POST, request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect("listado_productos")
     return render(request, 'core/form_productos.html', datos)
 
 
