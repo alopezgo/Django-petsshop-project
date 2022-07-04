@@ -4,8 +4,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
-from core.models import Producto, Mascota
-from .serializers import ProductoSerializer, MascotaSerializer
+from core.models import Producto, Mascota, Fundacion
+from .serializers import ProductoSerializer, MascotaSerializer, FundacionSerializer
 
 
 @csrf_exempt
@@ -46,6 +46,28 @@ def lista_mascotas(request):
     elif request.method == 'POST':
         data = JSONParser().parse(request)
         serializer = MascotaSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, statuts=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.data, statuts=status.HTTP_400_BAD_REQUEST)
+
+
+@csrf_exempt
+@api_view(['GET', 'POST'])
+def lista_fundaciones(request):
+    """
+    Lista todas los fundaciones
+    """
+
+    if request.method == 'GET':
+        fundacion = Fundacion.objects.all()
+        serializer = FundacionSerializer(fundacion, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = FundacionSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, statuts=status.HTTP_201_CREATED)

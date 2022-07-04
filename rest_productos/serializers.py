@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import Producto, Mascota
+from core.models import Fundacion, Producto, Mascota
 
 
 class ProductoSerializer(serializers.ModelSerializer):
@@ -8,8 +8,7 @@ class ProductoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Producto
-        fields = ['idproducto', 'marca',
-                  'desc_categoria', 'descripcion', 'imagen']
+        fields = "__all__"
 
 
 class MascotaSerializer(serializers.ModelSerializer):
@@ -18,3 +17,10 @@ class MascotaSerializer(serializers.ModelSerializer):
         model = Mascota
         fields = ['idMascota', 'nombreMascota',
                   'edadAnioMascota', 'edadMesesMascota', 'sexoMascota', 'estEstirizadoMascota', 'razaMascota', 'fotoMascota']
+
+
+class FundacionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Fundacion
+        fields = "__all__"

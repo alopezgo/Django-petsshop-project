@@ -15,11 +15,14 @@ class Categoria(models.Model):
 
 class Producto(models.Model):
     idproducto = models.AutoField(primary_key=True, verbose_name='ID Producto')
+    nombre = models.CharField(
+        max_length=50, verbose_name='Nombre Producto', default="Producto para mascotas")
     marca = models.CharField(max_length=20, verbose_name='Marca Producto')
     categoria = models.ForeignKey(
         Categoria, default=1,  on_delete=models.CASCADE)
     descripcion = models.CharField(
         max_length=500, verbose_name='Descripcion Producto')
+    precio = models.PositiveIntegerField(default=10000)
     imagen = models.ImageField(
         upload_to='static/images/upload/', default='static/images/fundaciones/5.png')
 
@@ -76,15 +79,17 @@ class Mascota(models.Model):
         return self.nombreMascota
 
 
-class Fundacion (models.Model):
+class Fundacion(models.Model):
     idFundacion = models.AutoField(
         primary_key=True, verbose_name='ID de Fundación')
     nombreFundacion = models.CharField(
-        max_length=150, verbose_name='Nombre de la Fundación')
+        max_length=150, verbose_name='Fundación')
     descFundacion = models.CharField(
-        max_length=250, verbose_name="Descripción de la Fundación")
+        max_length=500, verbose_name="Descripción de la Fundación")
     fotoFundacion = models.ImageField(
         upload_to='static/images/upload/', default='static/images/fundaciones/5.png')
+    website = models.URLField(
+        max_length=150, verbose_name='Pagina Web', default="https://todosdecidimos.org/animales/")
 
     def __str__(self):
         return self.nombreFundacion

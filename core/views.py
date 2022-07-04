@@ -26,17 +26,12 @@ def tienda(request):
     return render(request, 'core/tienda.html')
 
 
-def donaciones(request):
-
-    return render(request, 'core/donaciones.html')
-
-
 def Gatos(request):
     return render(request, 'core/Gatos.html')
 
 
 def Mas(request):
-    return render(request, 'core/Mas...html')
+    return render(request, 'core/Mas.html')
 
 
 def Perros(request):
@@ -106,6 +101,16 @@ def listado_productos(request):
     return render(request, 'core/listado_productos.html', datos)
 
 
+def vista_productos(request):
+    r = requests.get('http://127.0.0.1:8000/api/lista-productos')
+
+    datos = {
+        'productos': r.json()
+    }
+
+    return render(request, 'core/tienda.html', datos)
+
+
 def Adopciones(request):
     r = requests.get('http://127.0.0.1:8000/api/lista-mascotas')
 
@@ -123,3 +128,13 @@ def Form_cliente(request):
         cliente.save()
         cliente = FormularioCliente()
     return render(request, "contacto.html", {"form": cliente, "mensaje": "ok"})
+
+
+def Lista_donaciones(request):
+    r = requests.get('http://127.0.0.1:8000/api/lista-fundaciones')
+
+    datos = {
+        'fundaciones': r.json()
+    }
+
+    return render(request, 'core/donaciones.html', datos)
