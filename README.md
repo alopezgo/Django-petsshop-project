@@ -1,6 +1,8 @@
 # Tienda_Mascotas_Django
-Tienda de mascotas migrada a django
-Rutas 
-Listado de productos con Crud
-- http://127.0.0.1:8000/listado-productos/
-Listado de animales en adopcion conectada a base de datos, es accesible desde fundacion "adopta un peludo" situada en opcion del navbar "fundaciones"
+Tienda de mascotas creada en django, bootstrap y Oracle como base de datos.
+Para ejecutar el archivo es necesario realizar esto comandos 
+Para el almacenamiento de imagenes
+- pip install pillow
+
+Para usar la api creada dentro de rest_productos
+- pip install djangorestframework
