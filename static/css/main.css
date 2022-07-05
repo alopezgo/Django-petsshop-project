@@ -71,30 +71,6 @@ a {
     text-decoration: none
 }
 
-.fundacion1 {
-    background-image: url(../images/fundaciones/5.png);
-    height: 15rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.fundacion2 {
-    background-image: url(../images/fundaciones/6.png);
-    height: 15rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.fundacion3 {
-    background-image: url(../images/fundaciones/7.png);
-    height: 15rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 .ajustar_img {
     width: 10%;
     margin: 100px;

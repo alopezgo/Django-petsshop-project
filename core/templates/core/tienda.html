@@ -3,7 +3,7 @@
 <body>
   <div>{% include 'core\components\common\navbar.html' %}</div>
   <a href="{% url 'listado_productos' %}">
-    <button role="button" class="btn btn-primary">
+    <button role="button" class="btn btn-primary m-3">
       Para administrar los productos ingrese aqui
     </button>
   </a>
@@ -14,26 +14,27 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
+  <div class="">
     <img src="{% static 'images/Gato&perros.jpeg' %}" class="w-100" alt="" />
   </div>
   <div class="container">
-    {% for p in productos %}
-    <div class="row align-items-start">
-      <div class="col-3 text-center bg-primario">
-        <img
-          class="rounded-circle"
-          alt="140x140"
-          style="width: 140px; height: 140px"
-          src="{{p.imagen}}"
-          data-holder-rendered="true"
-        />
-        <h3>{{p.nombre}}</h3>
-        <p>{{p.descripcion}}</p>
-        <h4>${{p.precio}}</h4>
+    <div class="row text-center">
+      {% for p in productos %}
+      <div class="col text-center">
+        <div class="bg-primario">
+          <img
+            class="rounded-circle"
+            style="width: 140px; height: 140px"
+            src="{{p.imagen}}"
+            data-holder-rendered="true"
+          />
+          <h3>{{p.nombre}}</h3>
+          <p>{{p.descripcion}}</p>
+          <h4>${{p.precio}}</h4>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 
   <script src="{% static 'js/main.js' %}"></script>

@@ -4,13 +4,19 @@
 
   <div class="container">
     <h2 class="text-center m-4">MASCOTAS EN ADOPCIÓN</h2>
+    <p class="text-center m-4">
+      ¿Buscas adoptar y dar hogar a un animal rescatado? Todos ellos eran
+      animales abandonados en las calles que fueron rescatados y rehabilitados,
+      recibiendo atención para mejorar su salud física y emocional. Todos están
+      listos para encontrar a una nueva familia que los quiera y los cuide.
+    </p>
 
     <div class="row d-flex justify-content-evenly mb-4">
       {% for m in mascotas %}
       <div class="row col-2 text-center bg-primario">
         <h1>{{ m.nombreMascota }}</h1>
         <p>{{ m.edadAnioMascota }} Años y {{ m.edadMesesMascota }} Meses</p>
-        {% if m.sexoMascota == 2 %}
+        {% if m.sexoMascota == 1 %}
         <p>Macho</p>
         {% else %}
         <p>Hembra</p>
