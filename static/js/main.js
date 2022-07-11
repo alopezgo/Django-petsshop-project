@@ -42,6 +42,11 @@ $(document).ready(function () {
   //   $("#central").load('adopciones');
   //   return false;
   // });
+  // $('#div-btn6').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('login');
+  //   return false;
+  // });
 
 
   //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 

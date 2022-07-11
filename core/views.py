@@ -25,6 +25,11 @@ def contacto(request):
 def tienda(request):
     return render(request, 'core/tienda.html')
 
+def login(request):
+    return render(request, 'core/login.html')
+
+def registro(request):
+    return render(request, 'core/registro.html')
 
 def Gatos(request):
     return render(request, 'core/Gatos.html')
