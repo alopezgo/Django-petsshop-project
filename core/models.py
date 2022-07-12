@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 #  clases para los productos de la tienda
 
@@ -117,3 +118,17 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nombreCliente
+
+class Descuentos (models.Model):
+    idDescuento = models.AutoField(primary_key=True, verbose_name='ID del descuento')
+    nom_desc = models.CharField(max_length=200, verbose_name="Nombre del descuento")
+    porc_desc = models.FloatField(verbose_name="Monto de descuento expresado como flotante")  
+
+class Ventas (models.Model):
+    idVenta = models.AutoField(primary_key=True, verbose_name='ID de la venta')
+    iduser = models.ForeignKey(User,  on_delete=models.CASCADE, verbose_name="FK del usuario")
+    idproducto = models.ForeignKey(Producto,  on_delete=models.CASCADE, verbose_name = "FK del producto")
+    idcategoria_producto = models.ForeignKey(Categoria,  on_delete=models.CASCADE, verbose_name="FK de la categoría del producto") 
+    iddescuento = models.BooleanField(default=False)
+    fecha_compra = models.DateTimeField(verbose_name= "Datetime de la venta")
+    

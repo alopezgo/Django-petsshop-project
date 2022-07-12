@@ -54,6 +54,7 @@
             >Inicio</a
           >
         </li>
+        {% if user.is_authenticated %}
         <li class="nav-item">
           <a
             class="nav-link active"
@@ -63,6 +64,14 @@
             >Tienda</a
           >
         </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link active" 
+          aria-current="page" 
+          id="div-btn1" 
+          href="{% url 'login' %}">Tienda</a>
+        </li>
+        {% endif %}
         <li class="nav-item">
           <a
             class="nav-link active"
@@ -94,13 +103,18 @@
           <a
             class="nav-link active"
             aria-current="page"
-            id="div-btn4"
+            id="div-btn5"
             href="{% url 'adopciones' %}"
             >Adopta un Peludo</a
           >
         </li>
         {% if user.is_authenticated %}
-
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="div-btn7" href="{% url 'perfil' %}">Mi Perfil</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="div-btn8" href="/logout">Cerrar Sesión</a>
+          </li>
         {% else %}
           <li>
             <a class="nav-link active border border-secondary" 

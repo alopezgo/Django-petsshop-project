@@ -10,6 +10,7 @@ urlpatterns = [
     path('donaciones/', Lista_donaciones, name="donaciones"),
     path('adopciones/', Adopciones, name="adopciones"),
     path('registro/', registro, name="registro"),
+    path('perfil/', perfil, name="perfil"),
     path('form-productos/', form_productos, name="form_productos"),
     path('mod-productos/<int:id>', form_mod_productos, name="form_mod_productos"),
     path('del-productos/<int:id>', form_del_productos, name="form_del_productos"),

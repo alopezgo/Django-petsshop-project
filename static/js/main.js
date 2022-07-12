@@ -47,6 +47,17 @@ $(document).ready(function () {
   //   $("#central").load('login');
   //   return false;
   // });
+  // $('#div-btn7').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('perfil');
+  //   return false;
+  // });
+  // $('#div-btn8').on('click', function () {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $("#central").load('home');
+  //   return false;
+  // });
+
 
 
   //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
