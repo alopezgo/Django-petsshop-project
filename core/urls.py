@@ -1,5 +1,6 @@
 from django.urls import path
 from core.views import *
+from register.views import registro
 
 urlpatterns = [
     path('', index, name="index"),
@@ -8,12 +9,12 @@ urlpatterns = [
     path('tienda/', vista_productos, name="tienda"),
     path('donaciones/', Lista_donaciones, name="donaciones"),
     path('adopciones/', Adopciones, name="adopciones"),
-    path('login/', login, name="login"),
     path('registro/', registro, name="registro"),
     path('form-productos/', form_productos, name="form_productos"),
     path('mod-productos/<int:id>', form_mod_productos, name="form_mod_productos"),
     path('del-productos/<int:id>', form_del_productos, name="form_del_productos"),
     path('listado-productos/', listado_productos, name="listado_productos"),
+    
 
 
 
