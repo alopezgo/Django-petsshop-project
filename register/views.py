@@ -7,7 +7,7 @@ def registro(response):
         if form.is_valid():
             form.save()
         
-        return redirect("")
+        return redirect("/")
     else:
         form = RegistroForm()
     return render(response, "registro/registro.html", {"form" : form})
