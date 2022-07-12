@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from core.models import Producto, Mascota, Fundacion
 from .serializers import ProductoSerializer, MascotaSerializer, FundacionSerializer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
+@permission_classes((IsAuthenticated,))
 # Create your views here.
 def lista_productos(request):
     """
@@ -33,6 +36,7 @@ def lista_productos(request):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
+@permission_classes((IsAuthenticated,))
 def lista_mascotas(request):
     """
     Lista todas los Mascotas
@@ -55,6 +59,7 @@ def lista_mascotas(request):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
+@permission_classes((IsAuthenticated,))
 def lista_fundaciones(request):
     """
     Lista todas los fundaciones
