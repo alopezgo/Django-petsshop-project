@@ -26,33 +26,18 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>Marca</td>
-                        <td>Categoria</td>
-                        <td>Descripcion</td>
-                        <td>Imagen</td>
-                        <td colspan="2">Opciones</td>
+                        <td></td>
+                        <td colspan="2"></td>
                     </tr>
                 </thead>
-                {% for p in productos %}
+
                 <tbody>
                     <tr>
-                        <td>{{p.idproducto}}</td>
-                        <td>{{p.marca}}</td>
-                        <td>{{p.categoria}}</td>
-                        <td>{{p.descripcion}}</td>
-                        <td><img src="{{p.imagen}}" class="m-auto w-50" /></td>
-                        <td>
-                            <a href="{% url 'form_mod_productos' p.idproducto %}">Modificar</a>
-                        </td>
-                        <td>
-                            <a href="{% url 'form_del_productos' p.idproducto %}">Eliminar</a>
-                        </td>
+                        <td>{{}}</td>
+                        <td>{{}}</td>
                     </tr>
                 </tbody>
-                {% endfor %}
             </table>
-            <a href="{% url 'form_productos' %}">Nuevo Producto</a>
         </div>
     </div>
 </body>

@@ -2,6 +2,7 @@ from urllib.request import Request
 from django.shortcuts import render, redirect
 from .models import Fundacion, Mascota, Producto
 from .forms import FormularioCliente, ProductosForm
+from django.contrib.auth.decorators import login_required
 import requests
 # Create your views here.
 
@@ -21,10 +22,11 @@ def nosotros(request):
 def contacto(request):
     return render(request, 'core/contacto.html')
 
-
+@login_required
 def tienda(request):
     return render(request, 'core/tienda.html')
 
+@login_required
 def perfil(request):
     return render(request, 'core/perfil.html')
 

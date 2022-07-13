@@ -130,5 +130,4 @@ class Ventas (models.Model):
     idproducto = models.ForeignKey(Producto,  on_delete=models.CASCADE, verbose_name = "FK del producto")
     idcategoria_producto = models.ForeignKey(Categoria,  on_delete=models.CASCADE, verbose_name="FK de la categoría del producto") 
     iddescuento = models.BooleanField(default=False)
-    fecha_compra = models.DateTimeField(verbose_name= "Datetime de la venta")
-    
+    fecha_compra = models.DateTimeField(verbose_name= "Datetime de la venta")  
