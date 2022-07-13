@@ -1,6 +1,6 @@
 from urllib.request import Request
 from django.shortcuts import render, redirect
-from .models import Fundacion, Mascota, Producto
+from .models import Fundacion, Producto, Descuentos
 from .forms import FormularioCliente, ProductosForm
 from django.contrib.auth.decorators import login_required
 import requests
@@ -142,3 +142,4 @@ def Lista_donaciones(request):
     }
 
     return render(request, 'core/donaciones.html', datos)
+
