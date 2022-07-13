@@ -51,7 +51,7 @@ def BeBrave(request):
 
     return render(request, 'core/adopciones.html', datos)
 
-
+@login_required
 def form_productos(request):
     datos = {
         'form':  ProductosForm()
@@ -63,7 +63,7 @@ def form_productos(request):
             return redirect("listado_productos")
     return render(request, 'core/form_productos.html', datos)
 
-
+@login_required
 def form_mod_productos(request, id):
     producto = Producto.objects.get(idproducto=id)
     print(producto)
@@ -82,7 +82,7 @@ def form_mod_productos(request, id):
 
     return render(request, 'core/form_mod_productos.html', datos)
 
-
+@login_required
 def form_del_productos(request, id):
     producto = Producto.objects.get(idproducto=id)
     producto.delete()

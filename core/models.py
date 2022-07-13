@@ -123,6 +123,9 @@ class Descuentos (models.Model):
     idDescuento = models.AutoField(primary_key=True, verbose_name='ID del descuento')
     nom_desc = models.CharField(max_length=200, verbose_name="Nombre del descuento")
     porc_desc = models.FloatField(verbose_name="Monto de descuento expresado como flotante")  
+    
+    def __str__(self):
+        return self.nom_desc
 
 class Ventas (models.Model):
     idVenta = models.AutoField(primary_key=True, verbose_name='ID de la venta')
@@ -131,3 +134,6 @@ class Ventas (models.Model):
     idcategoria_producto = models.ForeignKey(Categoria,  on_delete=models.CASCADE, verbose_name="FK de la categoría del producto") 
     iddescuento = models.BooleanField(default=False)
     fecha_compra = models.DateTimeField(verbose_name= "Datetime de la venta")  
+    
+    def __str__(self):
+        return self.id_venta
