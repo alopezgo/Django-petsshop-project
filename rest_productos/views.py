@@ -12,7 +12,6 @@ from rest_framework.permissions import IsAuthenticated
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticated,))
 # Create your views here.
 def lista_productos(request):
     """
@@ -36,7 +35,6 @@ def lista_productos(request):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticated,))
 def lista_mascotas(request):
     """
     Lista todas los Mascotas
@@ -59,7 +57,6 @@ def lista_mascotas(request):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticated,))
 def lista_fundaciones(request):
     """
     Lista todas los fundaciones

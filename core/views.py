@@ -22,13 +22,16 @@ def nosotros(request):
 def contacto(request):
     return render(request, 'core/contacto.html')
 
+
 @login_required
 def tienda(request):
     return render(request, 'core/tienda.html')
 
+
 @login_required
 def perfil(request):
     return render(request, 'core/perfil.html')
+
 
 def Gatos(request):
     return render(request, 'core/Gatos.html')
@@ -51,6 +54,7 @@ def BeBrave(request):
 
     return render(request, 'core/adopciones.html', datos)
 
+
 @login_required
 def form_productos(request):
     datos = {
@@ -62,6 +66,7 @@ def form_productos(request):
             formulario.save()
             return redirect("listado_productos")
     return render(request, 'core/form_productos.html', datos)
+
 
 @login_required
 def form_mod_productos(request, id):
@@ -81,6 +86,7 @@ def form_mod_productos(request, id):
             print("me modifico")
 
     return render(request, 'core/form_mod_productos.html', datos)
+
 
 @login_required
 def form_del_productos(request, id):
@@ -106,7 +112,8 @@ def listado_productos(request):
 
 
 def vista_productos(request):
-    r = requests.get('http://127.0.0.1:8000/api/lista-productos')
+    r = requests.get('http://127.0.0.1:8000/api/lista-productos',
+                     auth=('prueba1', '5c47fa9c2d62e88c839582d09fa24bd41fb540de'))
 
     datos = {
         'productos': r.json()
@@ -142,4 +149,3 @@ def Lista_donaciones(request):
     }
 
     return render(request, 'core/donaciones.html', datos)
-
