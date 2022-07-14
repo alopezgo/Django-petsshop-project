@@ -6,3 +6,7 @@ Para el almacenamiento de imagenes
 
 Para usar la api creada dentro de rest_productos
 - pip install djangorestframework
+
+credenciales admin 
+user: admin
+pass: 1234
