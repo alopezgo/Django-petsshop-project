@@ -1,4 +1,4 @@
-# Tienda_Mascotas_Django
+# Website for e-commerce
 Tienda de mascotas creada en django, bootstrap y Oracle como base de datos.
 Para ejecutar el archivo es necesario realizar esto comandos 
 Para el almacenamiento de imagenes
